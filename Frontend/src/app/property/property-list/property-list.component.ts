@@ -13,12 +13,13 @@ export class PropertyListComponent {
   constructor(private util:HousingService){}
 
   ngOnInit():void{
-this.util.getAllProperties().subscribe(data=>{
+this.util.getAllProperties().subscribe({next:(data:any)=>{
   this.properties=data
-}, error=>{
+}, error:(error:any)=>{
   console.log(error)
+}
 });
-
+  
 
   }
 }
