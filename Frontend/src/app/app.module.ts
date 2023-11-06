@@ -14,10 +14,11 @@ import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserServiceService } from './services/user-service.service';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AuthService } from './services/auth.service';
 import { AlertyfyService } from './services/alertyfy.service';
-import { TaskListComponent } from './task-list/task-list.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 
 const appRoutes:Routes=[
   {path:'user', component:PropertyListComponent},
@@ -38,8 +39,7 @@ const appRoutes:Routes=[
     AddPropertyComponent,
     PropertyDetailsComponent,
     UserLoginComponent,
-    UserRegisterComponent,
-    TaskListComponent 
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +47,9 @@ const appRoutes:Routes=[
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    BsDropdownModule.forRoot()
   ],
   providers: [
     HousingService,
