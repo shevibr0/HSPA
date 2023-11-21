@@ -5,7 +5,7 @@
     <div class="card-body">
 
         <div>
-            <tabset>
+            <tabset #formTabs>
                 <tab heading="Basic Info" id="tab1">
                     <form (ngSubmit)="onSubmit(f.form.valid)" #f="ngForm">
                         <div class="form-group col-12">

@@ -10,6 +10,7 @@ import { TabsetComponent } from 'ngx-bootstrap/tabs';
 export class AddPropertyComponent {
   @ViewChild('Form')
   addPropertyForm: any
+  @ViewChild('formTabs') formTabs: TabsetComponent;
   constructor(private route: Router) { }
   onBack() {
     this.route.navigate(['/'])
